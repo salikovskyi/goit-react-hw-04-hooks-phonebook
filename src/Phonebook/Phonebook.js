@@ -5,13 +5,13 @@ import FilterList from '../FilterList/FilterList'
 import ContactList from '../ContactList/ContactList'
 import css from './Phonebook.module.css'
 import { nanoid } from 'nanoid'
-
+import useLocalStorage from "../hooks/useLocalStorage";
 
 
 const Phonebook = () => {
 
 
-  const [contacts, setContacts] = useState([]);
+  const[contacts, setContacts] = useLocalStorage('contacts', []);
   const [filter, setFilter] = useState('');
 
 
